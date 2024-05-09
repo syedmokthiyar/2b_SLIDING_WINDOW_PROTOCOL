@@ -10,6 +10,7 @@ To write a python program to perform sliding window protocol
 6. Stop the Program
 ## PROGRAM
 ## CLIENT:
+```
 import socket     
 s=socket.socket()    
 s.bind(('localhost',8000))   
@@ -28,15 +29,16 @@ while True:
  if ack:    
  print(ack)   
  i+=s    
- 
+```
 # SERVER:
+```
 import socket    
 s=socket.socket()   
 s.connect(('localhost',8000))   
 while True:    
  print(s.recv(1024).decode())    
  s.send("acknowledgement recived from the server".encode())
-
+```
 ## OUPUT
 CLIENT:
 ![image](https://github.com/aaliyafathimaa/2b_SLIDING_WINDOW_PROTOCOL/assets/154801069/1ccde7bd-7b63-4d4e-8d3d-ed240a7d0fda)
